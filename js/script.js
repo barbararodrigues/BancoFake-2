@@ -3,6 +3,8 @@
 const baseURL=  'https://accenture-java-desafio.herokuapp.com/';
 
 const login = document.getElementById('login');
+const singup = document.getElementById('singup');
+const home = document.getElementById('')
 login.innerHTML = `
 <div class="row mt-5 mb-5">
         <div class="col-md-6">
@@ -52,6 +54,9 @@ login.innerHTML = `
           </div>
         </div>
       </div>`;
+
+
+      
 
 function NewRegister() {
     let user = document.getElementById('user').value;
