@@ -1,0 +1,12 @@
+.nav-link:hover {
+  color: #dc3545 !important;
+}
+#checkbox:checked {
+  color: #dc3545;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+#checkbox:focus {
+  box-shadow: none;
+  border-color: #dc3545;
+}
