@@ -1,5 +1,5 @@
 # Desafio Gama Academy 
-Primeiro projeto do desafio Gama Academy, criar interface wed com telas simples de login, home e cadastro de um Banco Fake
+Segundo projeto do desafio Gama Academy, utilizando Javascript Vanilla, para criar os componentes da página criada no projeto #01 
 
 ## Tecnologias
 Neste segundo desafio foram utilzadas as tecnologias HTML, CSS e o framework BootStrap e Javascript Vanilla
