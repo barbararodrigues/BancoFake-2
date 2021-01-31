@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="160px" src="./src/assets/logo.svg"/>
+  <img width="160px" src="./assets/logo.svg"/>
   
   <h2> Entrega em grupo - CSS3</h2>
 </div>
