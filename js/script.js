@@ -1,10 +1,3 @@
-
-
-
-const DayName = ['Domingo', 'Segunda feira', 'Terca feira', 'Quarta feira', 'Quinta feira', 'Sexta feira', 'Sábado']
-const MonName = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-
-
 function LoadContent() {
   let app = document.getElementsByTagName("body")[0];
   app.innerHTML =  `<div class="text-center">
@@ -21,11 +14,11 @@ function baseUrl() {
 }
 
 function dayName(){
-  return DayName;
+  return ['Domingo', 'Segunda feira', 'Terca feira', 'Quarta feira', 'Quinta feira', 'Sexta feira', 'Sábado'];
 }
 
 function monName(){
-  return MonName;
+  return  ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 }
 
 
