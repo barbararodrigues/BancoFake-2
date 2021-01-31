@@ -22,5 +22,13 @@ function monName(){
 }
 
 
+function convertData(data) {
+  return moment(data).format('DD/MM/YYYY')
+}
+
+function convertDataServidor(data) {
+  return moment(data).format('YYYY-MM-DD')
+}
+
 
 

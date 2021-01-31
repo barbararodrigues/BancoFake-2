@@ -6,8 +6,13 @@ let MonName = monName();
 $(document).ready(function () {
     function getToken() {
         let dataUser = JSON.parse(localStorage.getItem('userDataAccount'))
-        let { token } = dataUser;
-        return token;
+        if(dataUser){
+            let { token } = dataUser;
+            return token;
+        } else {
+            window.location.replace('login.html');
+        }
+       
     }
 
     function getUser() {
@@ -23,9 +28,6 @@ $(document).ready(function () {
     }
 
 
-    function convertData(data) {
-        return moment(data, true).format('DD/MM/YYYY')
-    }
 
     let token = '';
     token = getToken();
@@ -34,7 +36,7 @@ $(document).ready(function () {
         LoadTransferencia();
         document.getElementById('destroy_session').addEventListener('click', function () {
             localStorage.clear()
-            window.location.replace('login.html')
+            window.location.replace('login.html');
         })
 
         document.getElementById('pay-credit').addEventListener('click', function () {
@@ -55,7 +57,7 @@ $(document).ready(function () {
                 planoConta,
                 valor
             }
-
+            LoadContent()
             axios.post(baseURL + 'lancamentos', postData, {
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,7 +67,7 @@ $(document).ready(function () {
             }).then(
                 res => {
                     if (res.status === 200) {
-                        window.location.reload()
+                window.location.reload()
                     }
                 }
             ).catch(err => {
@@ -106,6 +108,28 @@ $(document).ready(function () {
             `;
         }
 
+        function LoadEntrada(valorEntradas) {
+            let entradas = document.getElementById('entradas');
+            entradas.innerHTML = `
+            <div class="card-body">
+          <div class="d-flex flex-row justify-content-between">
+            <p class="align-self-center m-0 fs-6 m-2">Entradas</p>
+            <i class="bi bi-arrow-up-circle"></i>
+          </div>
+
+          <div>
+            <p class="fs-4 m-0 p-0">${Intl.NumberFormat("pt-br", {
+                style: "currency",
+                currency: "BRL",
+                }).format(valorEntradas)}</p>
+          </div>
+        </div>
+            `;
+        }
+
+
+        
+
         function LoadSaldo(contaCredito) {
             let saldo = document.getElementById('saldo');
             saldo.innerHTML = `
@@ -131,6 +155,8 @@ $(document).ready(function () {
             const { contaBanco, contaCredito } = data;
             let ContaBancoLancamentos = contaBanco.lancamentos;
             let ContaCreditoLancamentos = contaCredito.lancamentos;
+            let entradas = ContaBancoLancamentos.reduce((total, lancamento) => total + lancamento.valor, 0); 
+            LoadEntrada(entradas);
             LoadSaldo(contaCredito);
             let transferencias = document.getElementById('transferencias');
 
@@ -161,7 +187,7 @@ $(document).ready(function () {
                             ? '<i class="bi bi-arrow-up-circle">'
                             : '<i class="bi bi-arrow-down-circle">'
                         }</i></td>
-                        <td>${lanc.data}</td>
+                        <td>${convertData(lanc.data)}</td>
                       </tr>`
                             ).join("")
                           : ""
@@ -194,7 +220,7 @@ $(document).ready(function () {
                             ? '<i class="bi bi-arrow-up-circle">'
                             : '<i class="bi bi-arrow-down-circle">'
                         }</i></td>
-                        <td>${lanc.data}</td>
+                        <td>${convertData(lanc.data)}</td>
                       </tr>`
                             ).join("")
                           : ""

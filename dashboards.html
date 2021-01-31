@@ -45,7 +45,7 @@
           <a class="nav-link p-2 active" aria-current="page">Extrato</a>
           <a class="nav-link p-2"> <a data-toggle="modal" data-target="#modal_aside_right" class="nav-link p-2"
               type="button">
-              Tranferência
+              Transferência
             </a>
             <div id="modal_aside_right" class="modal fixed-right fade" tabindex="-1" role="dialog">
               <div class="modal-dialog modal-dialog-aside" role="document">
@@ -78,8 +78,12 @@
                       </div>
                       <div class="d-flex">
                         <div class="form-group p-0 m-0">
+                          <label for="data">Plano Conta:</label>
+                          <input type="text" id="plan" class="form-control mb-4" />
+                        </div>
+                        <div class="form-group p-0 m-0">
                           <label for="data">Data:</label>
-                          <input type="text" id="data" class="form-control mb-4" />
+                          <input type="date" id="data" class="form-control mb-4" />
                         </div>
                         <div class="form-group p-0 m-0">
                           <label for="value-transfer">Valor:</label>
@@ -131,17 +135,8 @@
     </nav>
 
     <section class="d-flex justify-content-around dashboard--primary-cards">
-      <div class="card w-25">
-        <div class="card-body">
-          <div class="d-flex flex-row justify-content-between">
-            <p class="align-self-center m-0 fs-6 m-2">Entradas</p>
-            <i class="bi bi-arrow-up-circle"></i>
-          </div>
-
-          <div>
-            <p class="fs-4 m-0 p-0">R$ 7.853,25</p>
-          </div>
-        </div>
+      <div class="card w-25" id="entradas">
+        
       </div>
 
       <div class="card w-25">
