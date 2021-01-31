@@ -13,4 +13,3 @@ https://bancominasgerais2.netlify.app/login.html
 ## Integrantes 
  Barbara
  Caputo 
- Luiz
