@@ -1,15 +1,49 @@
-# Desafio Gama Academy 
-Segundo projeto do desafio Gama Academy, utilizando Javascript Vanilla, para criar os componentes da página criada no projeto #01 
+<div align="center">
+  <img width="160px" src="./src/assets/logo.svg"/>
+  
+  <h2> Entrega em grupo - CSS3</h2>
+</div>
 
-## Tecnologias
-Neste segundo desafio foram utilzadas as tecnologias HTML, CSS e o framework BootStrap e Javascript Vanilla
+<div align="center">
+  <h3>Banco Minas Gerais - Projeto Banco Fake Gama Academy</h3>
+  <a href="#-Introduction">Introdução</a> |
+  <a href="#-Technologies-used">Tecnologias</a> |
+</div>
 
-## Grupo 
-Grupo 5 - Vouvacinar! Studio Code
+---
 
-## Link
-https://bancominasgerais2.netlify.app/login.html
+# 👨🏻‍💻 Introdução
 
-## Integrantes 
- Barbara
- Caputo 
+## Objetivo
+
+O Objetivo do projeto era criar um Banco Fake, nosso projeto se chama Banco Minas Gerais onde é possível cadastrar usuário, fazer login com autenticação e registrar movimentações financeiras. [API](https://accenture-java-desafio.herokuapp.com/swagger-ui.html#/usuario-resource/criarContaUsingPOST) foi disponibilizada pela [Gama Academy](https://www.gama.academy/) 
+
+
+## Esse repositório possui
+
+Aplicação Banco Minas Gerais:
+
+- Front-end (`web`). Acesse aqui [Banco Minas Gerais](https://bancominasgerais2.netlify.app/login.html).
+
+
+## Projeto
+
+Esse projeto foi realizado no treinamento da [Gama Academy](https://www.gama.academy/) coordenado pelo professor [Douglas Morais](https://www.linkedin.com/in/douglasmoraisdev/).
+
+
+# 🚀 Tecnologias utilizadas
+
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://www.w3schools.com/css/)
+- [JS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
+
+-Utilizamos JS para manipular a DOM e consumir dados de uma API 
+
+
+
+# 💻 Made by
+
+- Bárbara Rodrigues `(Development)` 🚀 [LinkedIn](https://www.linkedin.com/in/b%C3%A1rbara-rodrigues-49924697/)
+- Lucas Reis Caputo `(Development)` 🤘 [LinkedIn](https://www.linkedin.com/in/lucascaputo/)
