@@ -161,7 +161,7 @@ $(document).ready(function () {
             let transferencias = document.getElementById('transferencias');
 
             transferencias.innerHTML = `
-            <h1> Conta Crédito </h1>
+            <h3 class="text-muted"> Conta Crédito </h3>
             <table class="table">
                     <thead>
                       <tr>
@@ -194,7 +194,7 @@ $(document).ready(function () {
                       }
                     </tbody>
                   </table>
-                  <h1> Conta Banco </h1>
+                  <h3 class="text-muted"> Conta Banco </h3>
             <table class="table">
                     <thead>
                       <tr>
